@@ -15,13 +15,10 @@ const images = [
 
 const gallery = document.querySelector(`.gallery`);
 
-const pictures = images.map(function (image) {
-  
-  const crLi =document.createElement(`li`);
-  // crLi.classList.add(`gallery`);
-  const crImg =crLi.createElement(`img`);
-  crImg.setAttribute(`url`,image.url);
-  crImg.setAttribute(`alt`,image.alt);
-  gallery.insertAdjacentHTML("beforeend",crLi);
-});
 
+const pictures = images.map((image)=> {
+  return `<li><img src="${image.url}" alt="${image.alt}"></li>`
+  
+  }).join();
+
+gallery.insertAdjacentHTML("beforeend",pictures);

@@ -4,17 +4,18 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 };
 
-console.log(getRandomHexColor);
-
-const getToBody = document.getElementsByTagName(`body`);
-const numOfColor = document.querySelector(`.color`)
 const btnChangeColor = document.querySelector(`.change-color`)
-
+const getToBody = document.body;
+const numOfColor = document.querySelector(`.color`);
+                                          
 btnChangeColor.addEventListener('click',changeBodyClr);
 
-function changeBodyClr(event) {
-  getToBody.style.color = `${getRandomHexColor}`;
-  numOfColor.textContent = `${getRandomHexColor}`;
-  }
+function changeBodyClr() {
+  const col =getRandomHexColor();
+  getToBody.style.backgroundColor = `${col}`;
+  numOfColor.textContent = `${col}`;
+  };
+
+  
 
 
