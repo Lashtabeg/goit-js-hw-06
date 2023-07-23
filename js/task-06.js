@@ -4,10 +4,10 @@ const valid =document.querySelector(`#validation-input.valid`);
 const invalid =document.querySelector(`#validation-input.invalid`);
 const onInputBlur = () => {
     if (textInput.value.length === 6) {
-    textInput.classList.remove(`noFocus`);
+    textInput.classList.remove(`invalid`);
     textInput.classList.add(`valid`)
     } else {
-        textInput.classList.remove(`noFocus`);
+        textInput.classList.remove(`valid`);
     textInput.classList.add(`invalid`)
     }
 };
